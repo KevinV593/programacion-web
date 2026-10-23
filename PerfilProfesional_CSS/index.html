@@ -21,11 +21,11 @@
             </div>
         </nav>
         
-        <nav id="hamburger-nav">
+        <nav id="hamburgesa-nav">
             <div class="logo">Kevin Vaca</div>
-            <div class="hamburger-menu">
+            <div class="hamburgesa-menu">
                 <input type="checkbox" id="menu-toggle" hidden />
-                <label for="menu-toggle" class="hamburger-icon">
+                <label for="menu-toggle" class="hamburgesa-icon">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -38,7 +38,41 @@
                 </div>
             </div>
         </nav>
-
+        <section id="profile">
+            <div class="section__pic-container">
+                <img src="./assets/profile-pic.png" alt="John Doe profile picture" />
+            </div>
+            <div class="section__text">
+                <p class="section__text__p1">Hola, soy</p>
+                <h1 class="title">Kevin Vaca</h1>
+                <p class="section__text__p2">Ing. Software</p>
+                <div class="btn-container">
+                    <button
+                        class="btn btn-color-2"
+                        onclick="window.open('./assets/resume-example.pdf')"
+                    >
+                        Descargar CV
+                    </button>
+                    <button class="btn btn-color-1" onclick="location.href='./#contact'">
+                        Contacto
+                    </button>
+                </div>
+                <div id="socials-container">
+                    <img
+                        src="./assets/linkedin.png"
+                        alt="Mi LinkedIn"
+                        class="icon"
+                        onclick="location.href='https://linkedin.com/'"
+                    />
+                    <img
+                        src="./assets/github.png"
+                        alt="Mi Github"
+                        class="icon"
+                        onclick="location.href='https://github.com/'"
+                    />                                      
+                </div>
+            </div>
+        </section>
             <script src = "script.js"></script>
     </body>
 </html>

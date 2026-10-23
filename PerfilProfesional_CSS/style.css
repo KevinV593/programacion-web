@@ -68,16 +68,16 @@ a:hover {
 /* Menú Hamburguesa */
 
 
-#hamburger-nav {
+#hamburgesa-nav {
   display: none;
 }
 
-.hamburger-menu {
+.hamburgesa-menu {
   position: relative;
   display: inline-block;
 }
 
-.hamburger-icon {
+.hamburgesa-icon {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -87,7 +87,7 @@ a:hover {
 }
 
 
-.hamburger-icon span {
+.hamburgesa-icon span {
   width: 100%;
   height: 2px;
   background-color: black;
@@ -126,18 +126,134 @@ a:hover {
 
 /* Símbolo virgulilla ( ~ ), mejor es has() */
 
-.hamburger-menu:has(#menu-toggle:checked) .menu-links {
+.hamburgesa-menu:has(#menu-toggle:checked) .menu-links {
   max-height: 300px;
 }
 
-.hamburger-menu:has(#menu-toggle:checked) .hamburger-icon span:first-child {
+.hamburgesa-menu:has(#menu-toggle:checked) .hamburgesa-icon span:first-child {
   transform: rotate(45deg) translate(10px, 5px);
 }
 
-.hamburger-menu:has(#menu-toggle:checked) .hamburger-icon span:nth-child(2) {
+.hamburgesa-menu:has(#menu-toggle:checked) .hamburgesa-icon span:nth-child(2) {
   opacity: 0;
 }
 
-.hamburger-menu:has(#menu-toggle:checked) .hamburger-icon span:last-child {
+.hamburgesa-menu:has(#menu-toggle:checked) .hamburgesa-icon span:last-child {
   transform: rotate(-45deg) translate(10px, -5px);
+}
+
+/* Secciones */
+section {
+  padding-top: 4vh;
+  height: 96vh;
+  margin: 0 10rem;
+  box-sizing: border-box;
+  min-height: fit-content;
+}
+
+.section-container {
+  display: flex;
+}
+
+/* Sección Perfil */
+
+
+#profile {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  height: 80vh;
+}
+
+.section__pic-container {
+  display: flex;
+  height: 400px;
+  width: 400px;
+  margin: auto 0;
+}
+
+.section__text {
+  align-self: center;
+  text-align: center;
+}
+
+.section__text p {
+  font-weight: 600;
+}
+
+.section__text__p1 {
+  text-align: center;
+}
+
+.section__text__p2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 3rem;
+  text-align: center;
+}
+
+#socials-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+/* Iconos */
+
+.icon {
+  cursor: pointer;
+  height: 2rem;
+}
+
+/* Botones */
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn {
+  font-weight: 600;
+  transition: all 300ms ease;
+  padding: 1rem;
+  width: 8rem;
+  border-radius: 2rem;
+}
+
+
+.btn-color-1,
+.btn-color-2 {
+  border: rgb(53, 53, 53) 0.1rem solid;
+}
+
+.btn-color-1:hover,
+.btn-color-2:hover {
+  cursor: pointer;
+}
+
+.btn-color-1,
+.btn-color-2:hover {
+  background: rgb(53, 53, 53);
+  color: white;
+}
+
+.btn-color-1:hover {
+  background: rgb(0, 0, 0);
+}
+
+.btn-color-2 {
+  background: none;
+}
+
+.btn-color-2:hover {
+  border: rgb(255, 255, 255) 0.1rem solid;
+}
+
+.btn-container {
+  gap: 1rem;
 }
