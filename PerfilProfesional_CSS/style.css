@@ -257,3 +257,180 @@ section {
 .btn-container {
   gap: 1rem;
 }
+
+
+/* sobre-mi SECTION */
+
+#sobre-mi {
+  position: relative;
+}
+
+.sobre-mi-containers {
+  gap: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.sobre-mi-details-container {
+  justify-content: center;
+  flex-direction: column;
+}
+
+.sobre-mi-containers,
+.sobre-mi-details-container {
+  display: flex;
+}
+
+.sobre-mi-pic {
+  border-radius: 2rem;
+}
+
+
+.details-container {
+  padding: 1.5rem;
+  flex: 1;
+  background: white;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  text-align: center;
+}
+
+.section-container {
+  gap: 4rem;
+  height: 80%;
+}
+
+.section__pic-container {
+  height: 325px;
+  width: 325px;
+  margin: auto 0;
+}
+
+/* Experiencia Sección */
+
+#experiencia {
+  position: relative;
+}
+
+.experiencia-sub-title {
+  color: rgb(85, 85, 85);
+  font-weight: 600;
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+.experiencia-details-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.article-container {
+  display: flex;
+  text-align: initial;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 2.5rem;
+  justify-content: space-around;
+}
+
+article {
+  display: flex;
+  width: 10rem;
+  justify-content: space-around;
+  gap: 0.5rem;
+}
+
+article .icon {
+  cursor: default;
+}
+
+/* Contacto */
+.contact-section,
+.contacto-section {
+  padding: 50px;
+  margin-bottom: 100px;
+  background-color: #f1f5f9; /* Fondo gris azulado suave para despegarlo del blanco */
+  border-radius: 16px;
+  color: #1e293b; /* Texto oscuro de alto contraste */
+}
+
+.contact-section h2,
+.contacto-section h2 {
+  font-size: 35px;
+  color: #0f172a;
+  margin-bottom: 20px;
+}
+
+.contact-section .group,
+.contacto-section .group {
+  display: flex;
+  gap: 50px;
+}
+
+.contact-section .group .text,
+.contacto-section .group .text {
+  flex: 3;
+  margin-top: 20px;
+  line-height: 1.6;
+  color: #334155;
+  font-size: 16px;
+}
+
+.contact-section .group form,
+.contacto-section .group form {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-section .group form label,
+.contacto-section .group form label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #1e293b;
+}
+
+.contact-section .group form input,
+.contact-section .group form textarea,
+.contacto-section .group form input,
+.contacto-section .group form textarea {
+  font-family: 'Poppins', sans-serif;
+  border: 2px solid var(--link-color, #475569); /* Usa #475569 si la variable no existe */
+  background-color: #ffffff; /* Fondo blanco para que resalten las cajas sobre el gris */
+  color: #0f172a; /* Texto oscuro al escribir */
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 15px;
+  outline: none;
+  resize: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.contact-section .group form input:focus,
+.contact-section .group form textarea:focus,
+.contacto-section .group form input:focus,
+.contacto-section .group form textarea:focus {
+  border-color: #2563eb; /* Borde azul claro al hacer clic para escribir */
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.contact-section .group form button,
+.contacto-section .group form button {
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: var(--link-color, #1e293b); /* Fondo oscuro para que se lea el texto blanco */
+  border: none;
+  border-radius: 8px;
+  height: 50px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.contact-section .group form button:hover,
+.contacto-section .group form button:hover {
+  filter: brightness(0.9);
+}
