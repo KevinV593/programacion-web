@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Mi Portafolio</title>
         <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="mediaqueries.css" />
     </head>
     <body>
         <nav id="desktop-nav">
@@ -19,5 +20,23 @@
                 </ul>
             </div>
         </nav>
+        
+        <nav id="hamburger-nav">
+            <div class="logo">Kevin Vaca</div>
+            <div class="hamburger-menu">
+                <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+                </div>
+                <div class="menu-links">
+                    <li><a href="#sobre-mi" onclick="toggleMenu()">Sobre mí</a></li>
+                    <li><a href="#experiencia" onclick="toggleMenu()">Experiencia</a></li>
+                    <li><a href="#proyectos" onclick="toggleMenu()">Proyectos</a></li>
+                    <li><a href="#contacto" onclick="toggleMenu()">Contacto</a></li>
+                </div>
+            </div>
+        </nav>
+            <script src = "script.js"></script>
     </body>
 </html>
