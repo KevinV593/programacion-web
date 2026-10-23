@@ -124,27 +124,20 @@ a:hover {
   max-height: 300px;
 }
 
+/* Símbolo virgulilla ( ~ ), mejor es has() */
 
-.hamburger-icon.open span:first-child {
+.hamburger-menu:has(#menu-toggle:checked) .menu-links {
+  max-height: 300px;
+}
+
+.hamburger-menu:has(#menu-toggle:checked) .hamburger-icon span:first-child {
   transform: rotate(45deg) translate(10px, 5px);
 }
 
-.hamburger-icon.open span:nth-child(2) {
+.hamburger-menu:has(#menu-toggle:checked) .hamburger-icon span:nth-child(2) {
   opacity: 0;
 }
 
-.hamburger-icon.open span:last-child {
+.hamburger-menu:has(#menu-toggle:checked) .hamburger-icon span:last-child {
   transform: rotate(-45deg) translate(10px, -5px);
-}
-
-.hamburger-icon span:first-child {
-  transform: none;
-}
-
-.hamburger-icon span:first-child {
-  opacity: 1;
-}
-
-.hamburger-icon span:first-child {
-  transform: none;
 }
