@@ -1,38 +1,42 @@
-h1 {
-    padding: 29px;
-    text-align: center;
-    border: 50px solid black;
-    margin: 40px 80px 10px 1px;
-    font-size: 50px;
-    font-family: 90px;
-    background-color: brown;
-    color: aliceblue;
-}
-
-section p {
-    color: chocolate;
-}
-
-section > p {
-    color: blueviolet;
-}
-
-table {
-    background-color: blue;
-}
-
-#casa {
-    background-color: antiquewhite;
-}
-
-.importante {
-    background-color: brown;
-}
-
-.espacio {
-    margin: 100px;
-}
-
 * {
+}
+
+#carta {
+    width: 305px;
+    padding: 24px;
+    margin: 20px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
     text-align: center;
+}
+
+.estado {
+        position: relative;
+        top: -10px;
+        right: -125px;
+}
+
+.logo {
+    color: white;
+    background-color: green;
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    border: 1px;
+    border-radius: 25px;
+    margin: 25px 125px 20px 125px;
+    text-align: center;
+}
+
+.texto {
+    padding: 10px 1px 10px 1px;
+    text-align: center;
+}
+
+.box {
+    width: 300px;
+    height: 100px;
+    padding: 90px;
+    border: 3px solid;
+    border-radius: 15px;
 }

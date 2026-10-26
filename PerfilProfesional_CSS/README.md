@@ -39,42 +39,19 @@ El repositorio cuenta con la siguiente organización de archivos y directorios:
 
 🐳 Instrucciones para Construir y Ejecutar la Imagen Docker
 
-Asegúrate de tener Docker instalado y en ejecución en tu máquina antes de continuar.
-
-Opción 1: Construir la imagen localmente desde el código fuente
-
-Clonar el repositorio:
-
-git clone https://github.com/KevinV593/web.git
-
-
-Construir la imagen Docker:
-
-docker build -t portafolio-kevin-vaca:latest .
-
-
-Ejecutar el contenedor:
-
-docker run -d -p 8080:80 --name mi-portafolio portafolio-kevin-vaca:latest
-
-
-Visualizar en el navegador:
-Abre tu navegador web e ingresa a: http://localhost:8080
-
-Opción 2: Descargar y ejecutar directamente desde Docker Hub
+Descargar y ejecutar directamente desde Docker Hub
 
 Descargar la imagen (Pull):
 
-docker pull TU_USUARIO_DOCKERHUB/NOMBRE_DE_LA_IMAGEN:TAG
-
+docker pull kevinv593/portafoliocss:latest
 
 Ejecutar el contenedor (Run):
 
-docker run -d -p 8080:80 --name mi-portafolio TU_USUARIO_DOCKERHUB/NOMBRE_DE_LA_IMAGEN:TAG
+docker run -d -p 8080:80 --name mi-portafolio kevinv593/portafoliocss:latest
 
+Visualizar en el navegador: Ingresa a http://localhost:8080
 
-Visualizar en el navegador:
-Ingresa a http://localhost:8080
+Cambios Locales: file:///home/kevinv/Garage/code/web/PerfilProfesional_CSS/index.html
 
 🔗 Enlace a Docker Hub
 
