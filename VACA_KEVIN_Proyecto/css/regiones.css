@@ -1,0 +1,272 @@
+/* ========================================
+   1. SECCIÓN EXPLORAR POR REGIONES
+======================================== */
+
+#regiones {
+    padding: 100px 6%;
+    background-color: var(--color-arena);
+}
+
+.regiones-contenido {
+    max-width: 1400px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1.4fr 0.8fr;
+    gap: 50px;
+}
+
+
+/* ========================================
+   2. ENCABEZADO
+======================================== */
+
+.regiones-encabezado {
+    margin-bottom: 40px;
+}
+
+.regiones-etiqueta {
+    margin-bottom: 12px;
+
+    color: var(--color-turquesa);
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+}
+
+.regiones-encabezado h2 {
+    margin-bottom: 15px;
+
+    color: var(--color-mar);
+    font-size: 2.8rem;
+}
+
+.regiones-encabezado > p:last-child {
+    max-width: 600px;
+
+    color: var(--color-gris-volcanico);
+    line-height: 1.8;
+}
+
+
+/* ========================================
+   3. TARJETAS DE REGIONES
+======================================== */
+
+.region-card {
+    min-height: 230px;
+    margin-bottom: 25px;
+
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+
+    overflow: hidden;
+
+    background-color: white;
+    border-radius: var(--radio-borde);
+    box-shadow: var(--sombra-suave);
+
+    transition: transform 0.3s ease;
+}
+
+.region-card:hover {
+    transform: translateY(-5px);
+}
+
+
+/* IMÁGENES */
+
+.region-imagen {
+    min-height: 230px;
+    overflow: hidden;
+}
+
+.region-imagen img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.region-card:hover .region-imagen img {
+    transform: scale(1.05);
+}
+
+
+/* INFORMACIÓN */
+
+.region-texto {
+    padding: 22px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.region-texto h3 {
+    margin-bottom: 5px;
+
+    color: var(--color-mar);
+    font-size: 1.7rem;
+}
+
+.region-texto h4 {
+    margin-bottom: 10px;
+
+    color: var(--color-turquesa);
+    font-size: 1rem;
+}
+
+.region-texto p {
+    margin-bottom: 10px;
+
+    color: var(--color-gris-volcanico);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.region-texto .region-caracteristicas {
+    color: var(--color-amazonia);
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.region-texto a {
+    align-self: flex-start;
+
+    color: var(--color-mar);
+    font-weight: bold;
+
+    transition: color 0.3s ease;
+}
+
+.region-texto a:hover {
+    color: var(--color-turquesa);
+}
+
+
+/* ========================================
+   4. MAPA TURÍSTICO
+======================================== */
+
+.regiones-mapa-contenido {
+    position: sticky;
+    top: 120px;
+
+    align-self: start;
+}
+
+.regiones-mapa {
+    width: 100%;
+    overflow: hidden;
+    border-radius: var(--radio-borde);
+}
+
+.regiones-mapa img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+
+/* ========================================
+   5. ACCESO AL MAPA VIAL
+======================================== */
+
+.acceso-mapa-vial {
+    margin-top: 25px;
+    padding: 30px;
+
+    background-color: var(--color-mar);
+    color: white;
+
+    border-radius: var(--radio-borde);
+}
+
+.mapa-etiqueta {
+    margin-bottom: 10px;
+
+    color: var(--color-oro);
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+}
+
+.acceso-mapa-vial h3 {
+    margin-bottom: 12px;
+
+    color: white;
+    font-size: 1.8rem;
+}
+
+.acceso-mapa-vial > p:not(.mapa-etiqueta) {
+    margin-bottom: 20px;
+
+    color: var(--color-arena);
+    line-height: 1.7;
+}
+
+.acceso-mapa-vial a {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 12px 20px;
+
+    background-color: var(--color-turquesa);
+    color: white;
+
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.acceso-mapa-vial a:hover {
+    background-color: var(--color-oro);
+    color: var(--color-mar);
+}
+
+
+/* ========================================
+   6. RESPONSIVE
+======================================== */
+
+@media screen and (max-width: 1000px) {
+
+    .regiones-contenido {
+        grid-template-columns: 1fr;
+    }
+
+    .regiones-mapa-contenido {
+        position: static;
+        max-width: 650px;
+        margin: 0 auto;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+
+    #regiones {
+        padding: 65px 5%;
+    }
+
+    .regiones-encabezado h2 {
+        font-size: 2.2rem;
+    }
+
+    .region-card {
+        grid-template-columns: 1fr;
+    }
+
+    .region-imagen {
+        height: 230px;
+    }
+
+    .region-texto {
+        padding: 22px;
+    }
+
+    .acceso-mapa-vial {
+        padding: 22px;
+    }
+
+}

@@ -9,12 +9,17 @@
     display: flex;
     align-items: center;
 
-    background-color: var(--color-mar);
-    background-image: linear-gradient(
-        120deg,
-        rgba(18, 59, 74, 0.12),
-        rgba(18, 59, 74, 0.45)
-    );
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(18, 59, 74, 0.85),
+            rgba(18, 59, 74, 0.45)
+        ),
+        url("../assets/img/cotopaxi-hero.jpeg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 
     color: white;
 }
@@ -30,7 +35,7 @@
     margin: 0 auto;
 
     display: grid;
-    grid-template-columns: 1fr 1.2fr 0.7fr;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
     gap: 30px;
 }
@@ -41,7 +46,7 @@
 ======================================== */
 
 .hero-texto {
-    max-width: 450px;
+    max-width: 550px;
 }
 
 .hero-etiqueta {
@@ -91,21 +96,7 @@
 
 
 /* ========================================
-   5. IMAGEN PRINCIPAL
-======================================== */
-
-.hero-imagen img {
-    width: 100%;
-    height: 480px;
-
-    object-fit: cover;
-    border-radius: var(--radio-borde);
-    box-shadow: var(--sombra-suave);
-}
-
-
-/* ========================================
-   6. MAPA DE ECUADOR
+   5. MAPA DE ECUADOR
 ======================================== */
 
 .hero-mapa {
@@ -116,15 +107,15 @@
 
 .hero-mapa img {
     width: 100%;
-    max-width: 260px;
+    max-width: 780px;
 
-    opacity: 0.75;
+    opacity: 0.85;
     filter: brightness(0) invert(1);
 }
 
 
 /* ========================================
-   7. RESPONSIVE
+   6. RESPONSIVE
 ======================================== */
 
 @media screen and (max-width: 1000px) {
@@ -133,12 +124,8 @@
         grid-template-columns: 1fr 1fr;
     }
 
-    .hero-mapa {
-        grid-column: 1 / -1;
-    }
-
     .hero-mapa img {
-        max-width: 160px;
+        max-width: 500px;
     }
 
 }
@@ -158,12 +145,8 @@
         font-size: 2.8rem;
     }
 
-    .hero-imagen img {
-        height: 280px;
-    }
-
     .hero-mapa img {
-        max-width: 120px;
+        max-width: 300px;
     }
 
 }
