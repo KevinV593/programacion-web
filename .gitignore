@@ -1,0 +1,7 @@
+# Archivos comprimidos
+*.zip
+*.rar
+*.7z
+
+# Documentos PDF
+*.pdf

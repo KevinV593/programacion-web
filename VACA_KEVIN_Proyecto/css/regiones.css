@@ -156,18 +156,19 @@
     align-self: start;
 }
 
-.regiones-mapa {
+.regiones-video {
     width: 100%;
-    overflow: hidden;
-    border-radius: var(--radio-borde);
+    max-width: 700px;
+    aspect-ratio: 16 / 9;
+    margin: 0 auto;
 }
 
-.regiones-mapa img {
+.regiones-video iframe {
     width: 100%;
-    height: auto;
-    object-fit: contain;
+    height: 100%;
+    border: none;
+    border-radius: 15px;
 }
-
 
 /* ========================================
    5. ACCESO AL MAPA VIAL
