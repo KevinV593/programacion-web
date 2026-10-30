@@ -1,0 +1,114 @@
+/* ========================================
+   1. VARIABLES GLOBALES
+======================================== */
+
+:root {
+    /* Colores principales */
+    --color-mar: #123B4A;
+    --color-turquesa: #2A9D9F;
+    --color-arena: #F5F1E8;
+    --color-gris-volcanico: #343B3D;
+
+    /* Colores complementarios */
+    --color-oro: #E5B94B;
+    --color-rojo: #D62828;
+    --color-amazonia: #2E7D32;
+
+    /* Tipografías */
+    --fuente-titulos: "DM Serif Display", Georgia, serif;
+    --fuente-textos: "Lustria", Arial, sans-serif;
+
+    /* Tamaños de texto */
+    --texto-pequeno: 0.875rem;
+    --texto-normal: 1rem;
+    --texto-mediano: 1.25rem;
+    --texto-grande: 2rem;
+    --titulo-principal: 3.5rem;
+
+    /* Espaciados */
+    --espacio-pequeno: 0.5rem;
+    --espacio-normal: 1rem;
+    --espacio-mediano: 2rem;
+    --espacio-grande: 4rem;
+
+    /* Diseño general */
+    --ancho-contenido: 1200px;
+    --radio-borde: 12px;
+    --sombra-suave: 0 4px 15px rgba(18, 59, 74, 0.10);
+}
+
+
+/* ========================================
+   2. REGLAS GENERALES
+======================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--color-arena);
+    color: var(--color-gris-volcanico);
+    font-family: var(--fuente-textos);
+    font-size: var(--texto-normal);
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--fuente-titulos);
+    color: var(--color-mar);
+    line-height: 1.2;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+
+/* ========================================
+   3. CONTENEDOR GENERAL
+======================================== */
+
+.contenedor {
+    width: 90%;
+    max-width: var(--ancho-contenido);
+    margin: 0 auto;
+}
+
+
+/* ========================================
+   4. ESTILOS COMUNES DE SECCIONES
+======================================== */
+
+section {
+    padding: var(--espacio-grande) 0;
+}
+
+.titulo-seccion {
+    margin-bottom: var(--espacio-normal);
+    font-size: var(--texto-grande);
+}
+
+.descripcion-seccion {
+    max-width: 700px;
+    margin-bottom: var(--espacio-mediano);
+}
