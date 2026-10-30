@@ -1,0 +1,199 @@
+
+/* ================================
+   SECCIÓN GALERÍA
+================================ */
+
+#galeria {
+    padding: 100px 6%;
+    background-color: white;
+}
+
+
+/* Encabezado */
+
+.galeria-encabezado {
+    max-width: 800px;
+    margin: 0 auto 50px;
+    text-align: center;
+}
+
+.galeria-etiqueta {
+    margin-bottom: 12px;
+    color: var(--color-turquesa);
+    font-size: .85rem;
+    letter-spacing: 3px;
+}
+
+.galeria-encabezado h2 {
+    margin-bottom: 20px;
+    color: var(--color-mar);
+    font-size: 2.8rem;
+}
+
+.galeria-encabezado > p:last-child {
+    color: var(--color-gris-volcanico);
+    font-size: 1rem;
+    line-height: 1.9;
+}
+
+
+/* Contenedor de fotografías */
+
+.galeria-contenido {
+    max-width: 1400px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 250px 250px;
+
+    gap: 18px;
+}
+
+
+/* Imágenes */
+
+.galeria-imagen {
+    overflow: hidden;
+    border-radius: 16px;
+}
+
+.galeria-imagen img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform .6s ease;
+}
+
+
+/* Efecto al pasar el cursor */
+
+.galeria-imagen:hover img {
+    transform: scale(1.06);
+}
+
+
+/* Distribución asimétrica */
+
+.galeria-principal {
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+}
+
+.galeria-segunda {
+    grid-column: 3 / 5;
+    grid-row: 1 / 2;
+}
+
+.galeria-tercera {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+}
+
+.galeria-cuarta {
+    grid-column: 4 / 5;
+    grid-row: 2 / 3;
+}
+
+.galeria-quinta {
+    grid-column: 1 / 5;
+    grid-row: 3 / 4;
+
+    height: 250px;
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+/* Tablets */
+
+@media (max-width: 900px) {
+
+    #galeria {
+        padding: 80px 5%;
+    }
+
+    .galeria-contenido {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 280px 220px 220px;
+        gap: 15px;
+    }
+
+    .galeria-principal {
+        grid-column: 1 / 3;
+        grid-row: 1 / 2;
+    }
+
+    .galeria-segunda {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+
+    .galeria-tercera {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+    }
+
+    .galeria-cuarta {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+    }
+
+    .galeria-quinta {
+        grid-column: 2 / 3;
+        grid-row: 3 / 4;
+        height: auto;
+    }
+
+}
+
+
+/* Celulares */
+
+@media (max-width: 600px) {
+
+    #galeria {
+        padding: 65px 5%;
+    }
+
+    .galeria-encabezado h2 {
+        font-size: 2.2rem;
+    }
+
+    .galeria-contenido {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 260px 180px 180px 180px;
+        gap: 12px;
+    }
+
+    .galeria-principal {
+        grid-column: 1 / 3;
+        grid-row: 1 / 2;
+    }
+
+    .galeria-segunda {
+        grid-column: 1 / 3;
+        grid-row: 2 / 3;
+    }
+
+    .galeria-tercera {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+    }
+
+    .galeria-cuarto {
+        grid-column: 2 / 3;
+        grid-row: 3 / 4;
+    }
+
+    .galeria-quinta {
+        grid-column: 1 / 3;
+        grid-row: 4 / 5;
+        height: auto;
+    }
+
+}
