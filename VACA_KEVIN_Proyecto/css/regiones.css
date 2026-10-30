@@ -127,8 +127,12 @@
 
 .region-texto .region-caracteristicas {
     color: var(--color-amazonia);
-    font-size: 0.8rem;
+    font-size: .8rem;
     font-weight: bold;
+}
+
+.region-card:nth-of-type(even) .region-caracteristicas {
+    color: var(--color-rojo);
 }
 
 .region-texto a {

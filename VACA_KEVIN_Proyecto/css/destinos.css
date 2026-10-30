@@ -1,0 +1,212 @@
+
+/* ================================
+   SECCIÓN DESTINOS TURÍSTICOS
+================================ */
+
+#destinos {
+    padding: 100px 6%;
+    background-color: var(--color-arena);
+}
+
+/* Encabezado */
+
+.destinos-encabezado {
+    max-width: 850px;
+    margin: 0 auto 50px;
+    text-align: center;
+}
+
+.destinos-etiqueta {
+    margin-bottom: 12px;
+    color: var(--color-turquesa);
+    font-size: .85rem;
+    letter-spacing: 3px;
+}
+
+.destinos-encabezado h2 {
+    margin-bottom: 20px;
+    color: var(--color-mar);
+    font-size: 2.8rem;
+}
+
+.destinos-encabezado > p:last-child {
+    color: var(--color-gris-volcanico);
+    font-size: 1rem;
+    line-height: 1.9;
+}
+
+
+/* Contenedor */
+
+.destinos-contenido {
+    max-width: 1400px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+
+/* Tarjetas */
+
+.destino-card {
+    overflow: hidden;
+    background-color: white;
+    border-radius: 18px;
+    box-shadow: var(--sombra-suave);
+
+    transition: transform .3s ease;
+}
+
+.destino-card:hover {
+    transform: translateY(-5px);
+}
+
+
+/* Imagen */
+
+.destino-imagen {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+}
+
+.destino-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    transition: transform .5s ease;
+}
+
+.destino-card:hover .destino-imagen img {
+    transform: scale(1.06);
+}
+
+
+/* Título sobre la fotografía */
+
+.destino-titulo {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    padding: 25px;
+
+    background: linear-gradient(
+        to top,
+        rgba(18, 59, 74, .85),
+        transparent
+    );
+}
+
+.destino-region {
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 6px 13px;
+
+    background-color: var(--color-turquesa);
+    color: white;
+
+    border-radius: 20px;
+
+    font-size: .72rem;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.destino-titulo h3 {
+    color: white;
+    font-size: 2rem;
+}
+
+
+/* Descripción fuera de la imagen */
+
+.destino-texto {
+    padding: 25px 30px 30px;
+}
+
+.destino-texto p {
+    margin-bottom: 20px;
+
+    color: var(--color-gris-volcanico);
+    font-size: .9rem;
+    line-height: 1.9;
+}
+
+.destino-texto a {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    color: var(--color-mar);
+    font-weight: bold;
+
+    transition: color .3s ease;
+}
+
+.destino-texto a:hover {
+    color: var(--color-turquesa);
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 900px) {
+
+    #destinos {
+        padding: 80px 5%;
+    }
+
+    .destinos-contenido {
+        gap: 22px;
+    }
+
+    .destino-imagen {
+        height: 260px;
+    }
+
+    .destino-texto {
+        padding: 22px;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    #destinos {
+        padding: 65px 5%;
+    }
+
+    .destinos-encabezado h2 {
+        font-size: 2.2rem;
+    }
+
+    .destinos-contenido {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .destino-imagen {
+        height: 250px;
+    }
+
+    .destino-titulo {
+        padding: 20px;
+    }
+
+    .destino-titulo h3 {
+        font-size: 1.7rem;
+    }
+
+    .destino-texto {
+        padding: 22px;
+    }
+
+}
