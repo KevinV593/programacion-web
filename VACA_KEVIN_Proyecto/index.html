@@ -30,25 +30,61 @@
 <body>
 
     <!-- ENCABEZADO Y NAVEGACION -->
-    <header>
+    <header class="encabezado">
 
-        <nav>
+        <!-- NAVBAR ESCRITORIO -->
+        <nav id="desktop-nav">
 
-            <!-- LOGOTIPO -->
-            <a href="#inicio">
-                <img src="assets/img/logo-ecuador.png" alt="Logotipo de Ecuador Turismo">
+            <a href="#inicio" class="logo">
+                <img src="assets/img/logo-ecuador.png" alt="Ecuador Turismo">
                 <span>ECUADOR</span>
             </a>
 
-            <!-- MENU PRINCIPAL -->
-            <ul>
-                <li><a href="#destinos">Destinos</a></li>
+            <ul class="menu-principal">
+                <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#regiones">Regiones</a></li>
+                <li><a href="#destinos">Destinos</a></li>
                 <li><a href="#galeria">Galería</a></li>
                 <li><a href="#paquetes">Paquetes</a></li>
                 <li><a href="#itinerarios">Itinerarios</a></li>
-                <li><a href="#contacto">Contacto</a></li>
             </ul>
+
+            <a href="#contacto" class="boton-contacto">
+                Contáctanos
+            </a>
+
+        </nav>
+
+
+        <!-- NAVBAR MOVIL -->
+        <nav id="hamburguesa-nav">
+
+            <a href="#inicio" class="logo">
+                <img src="assets/img/logo-ecuador.png" alt="Ecuador Turismo">
+                <span>ECUADOR</span>
+            </a>
+
+            <div class="hamburguesa-menu">
+
+                <input type="checkbox" id="menu-toggle" hidden>
+
+                <label for="menu-toggle" class="hamburguesa-icon" aria-label="Abrir menú">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+
+                <ul class="menu-links">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#regiones">Regiones</a></li>
+                    <li><a href="#destinos">Destinos</a></li>
+                    <li><a href="#galeria">Galería</a></li>
+                    <li><a href="#paquetes">Paquetes</a></li>
+                    <li><a href="#itinerarios">Itinerarios</a></li>
+                    <li><a href="#contacto">Contáctanos</a></li>
+                </ul>
+
+            </div>
 
         </nav>
 

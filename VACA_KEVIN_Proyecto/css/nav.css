@@ -1,0 +1,234 @@
+/* ========================================
+   1. ENCABEZADO
+======================================== */
+
+.encabezado {
+    width: 100%;
+    padding: 15px 5%;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* ========================================
+   2. NAVBAR ESCRITORIO
+======================================== */
+
+#desktop-nav {
+    max-width: 1400px;
+    min-height: 75px;
+    margin: 0 auto;
+    padding: 10px 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: white;
+    border-radius: 50px;
+    box-shadow: var(--sombra-suave);
+}
+
+
+/* LOGOTIPO */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    color: var(--color-mar);
+    font-family: var(--fuente-titulos);
+    font-size: 1.4rem;
+}
+
+.logo img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+}
+
+
+/* ENLACES */
+
+.menu-principal {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+
+    list-style: none;
+}
+
+.menu-principal a {
+    color: var(--color-gris-volcanico);
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.menu-principal a:hover {
+    color: var(--color-turquesa);
+}
+
+
+/* BOTÓN DE CONTACTO */
+
+.boton-contacto {
+    padding: 11px 20px;
+
+    background-color: var(--color-turquesa);
+    color: white;
+
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.boton-contacto:hover {
+    background-color: var(--color-mar);
+}
+
+
+/* ========================================
+   3. NAVBAR MOVIL
+======================================== */
+
+#hamburguesa-nav {
+    display: none;
+
+    max-width: 1400px;
+    min-height: 70px;
+    margin: 0 auto;
+    padding: 10px 20px;
+
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: var(--sombra-suave);
+}
+
+
+/* CONTENEDOR HAMBURGUESA */
+
+.hamburguesa-menu {
+    position: relative;
+}
+
+
+/* ICONO HAMBURGUESA */
+
+.hamburguesa-icon {
+    width: 35px;
+    height: 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    cursor: pointer;
+}
+
+.hamburguesa-icon span {
+    width: 100%;
+    height: 3px;
+
+    background-color: var(--color-mar);
+    border-radius: 5px;
+
+    transition: all 0.3s ease;
+}
+
+
+/* MENÚ DESPLEGABLE */
+
+.menu-links {
+    position: absolute;
+    top: 50px;
+    right: 0;
+
+    width: 220px;
+    max-height: 0;
+
+    overflow: hidden;
+    list-style: none;
+
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: var(--sombra-suave);
+
+    transition: max-height 0.4s ease;
+}
+
+.menu-links li a {
+    display: block;
+    padding: 12px 18px;
+
+    color: var(--color-gris-volcanico);
+    transition: background-color 0.3s ease;
+}
+
+.menu-links li a:hover {
+    background-color: var(--color-arena);
+    color: var(--color-turquesa);
+}
+
+
+/* ========================================
+   4. INTERACCIÓN DEL MENÚ
+======================================== */
+
+.hamburguesa-menu:has(#menu-toggle:checked) .menu-links {
+    max-height: 400px;
+}
+
+.hamburguesa-menu:has(#menu-toggle:checked) .hamburguesa-icon span:first-child {
+    transform: rotate(45deg) translate(7px, 7px);
+}
+
+.hamburguesa-menu:has(#menu-toggle:checked) .hamburguesa-icon span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburguesa-menu:has(#menu-toggle:checked) .hamburguesa-icon span:last-child {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+
+/* ========================================
+   5. RESPONSIVE
+======================================== */
+
+@media screen and (max-width: 1000px) {
+
+    #desktop-nav {
+        display: none;
+    }
+
+    #hamburguesa-nav {
+        display: flex;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+
+    .encabezado {
+        padding: 12px 4%;
+    }
+
+    #hamburguesa-nav {
+        padding: 10px 15px;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .logo img {
+        width: 38px;
+        height: 38px;
+    }
+
+}
