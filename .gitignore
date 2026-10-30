@@ -1,7 +1,48 @@
+# Documentos
+*.pdf
+*.doc
+*.docx
+*.xls
+*.xlsx
+*.ppt
+*.pptx
+
 # Archivos comprimidos
 *.zip
 *.rar
 *.7z
+*.tar
+*.gz
 
-# Documentos PDF
-*.pdf
+# Imágenes
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.webp
+*.svg
+*.bmp
+*.ico
+*.tiff
+
+# Videos
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.webm
+
+# Audio
+*.mp3
+*.wav
+*.ogg
+*.flac
+*.aac
+
+# Archivos pesados
+*.psd
+*.ai
+*.sketch
+*.fig
+*.exe
+*.iso
