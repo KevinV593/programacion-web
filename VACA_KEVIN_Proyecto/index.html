@@ -613,101 +613,217 @@
 
         </section>
 
-
         <!-- 6. ITINERARIOS -->
         <section id="itinerarios">
 
-            <h2>Itinerarios</h2>
+            <div class="itinerarios-fondo">
 
-            <p>Organiza tus experiencias y descubre cada destino.</p>
+                <div class="itinerarios-contenido">
 
-            <div>
+                    <div class="itinerarios-encabezado">
+                        <p class="itinerarios-etiqueta">
+                            UNA AVENTURA EN CADA PASO
+                        </p>
 
-                <article>
-                    <h3>Día 1</h3>
-                    <p>Llegada y bienvenida al destino.</p>
-                </article>
+                        <h2>Itinerarios</h2>
 
-                <article>
-                    <h3>Día 2</h3>
-                    <p>Recorrido por los principales atractivos turísticos.</p>
-                </article>
+                        <p>
+                            Organiza tu aventura y descubre cada rincón del Ecuador.
+                            Te proponemos un recorrido de tres días lleno de
+                            naturaleza, cultura y experiencias inolvidables.
+                        </p>
+                    </div>
 
-                <article>
-                    <h3>Día 3</h3>
-                    <p>Actividades recreativas y experiencias culturales.</p>
-                </article>
+                    <div class="itinerarios-dias">
+
+                        <article class="itinerario-card">
+                            <span class="itinerario-numero">01</span>
+
+                            <p class="itinerario-dia">PRIMER DÍA</p>
+
+                            <h3>Bienvenida a Ecuador</h3>
+
+                            <p>
+                                Comienza tu aventura con la llegada al destino,
+                                recepción y traslado al alojamiento. Disfruta
+                                de un primer recorrido y descubre la gastronomía
+                                y cultura local.
+                            </p>
+                        </article>
+
+                        <article class="itinerario-card">
+                            <span class="itinerario-numero">02</span>
+
+                            <p class="itinerario-dia">SEGUNDO DÍA</p>
+
+                            <h3>Explorando nuevos paisajes</h3>
+
+                            <p>
+                                Recorre los principales atractivos turísticos,
+                                conoce paisajes extraordinarios y disfruta de
+                                actividades en contacto con la naturaleza.
+                            </p>
+                        </article>
+
+                        <article class="itinerario-card">
+                            <span class="itinerario-numero">03</span>
+
+                            <p class="itinerario-dia">TERCER DÍA</p>
+
+                            <h3>Experiencias inolvidables</h3>
+
+                            <p>
+                                Vive actividades recreativas y culturales,
+                                conoce las tradiciones de la comunidad y
+                                disfruta de los últimos momentos de tu viaje.
+                            </p>
+                        </article>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+        
+        <!-- 7. FORMULARIO DE CONSULTAS -->
+        <section id="contacto">
+
+            <div class="contacto-contenido">
+
+                <div class="contacto-informacion">
+
+                    <p class="contacto-etiqueta">ESTAMOS PARA AYUDARTE</p>
+
+                    <h2>¿Tienes alguna consulta?</h2>
+
+                    <p class="contacto-descripcion">
+                        Estamos aquí para ayudarte a planificar tu próxima aventura.
+                        Cuéntanos qué destino te gustaría conocer y te ayudaremos
+                        a encontrar la experiencia ideal.
+                    </p>
+
+                    <div class="contacto-mensaje">
+                        <span>✦</span>
+                        <p>
+                            Cada viaje comienza con una idea.
+                            ¡Hagamos realidad tu próxima aventura por Ecuador!
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="contacto-formulario">
+
+                    <h3>Envíanos tu consulta</h3>
+
+                    <p>Completa el formulario y cuéntanos tus planes de viaje.</p>
+
+                    <form action="#" method="post">
+
+                        <div class="campo-formulario">
+                            <label for="nombre">Nombre completo</label>
+                            <input
+                                type="text"
+                                id="nombre"
+                                name="nombre"
+                                placeholder="Ingresa tu nombre"
+                                required
+                                minlength="3">
+                        </div>
+
+                        <div class="campo-formulario">
+                            <label for="correo">Correo electrónico</label>
+                            <input
+                                type="email"
+                                id="correo"
+                                name="correo"
+                                placeholder="ejemplo@correo.com"
+                                required>
+                        </div>
+
+                        <div class="campo-formulario">
+                            <label for="destino">Destino de interés</label>
+
+                            <select id="destino" name="destino" required>
+                                <option value="">Selecciona un destino</option>
+                                <option value="galapagos">Galápagos</option>
+                                <option value="costa">Costa</option>
+                                <option value="sierra">Sierra</option>
+                                <option value="amazonia">Amazonía</option>
+                            </select>
+                        </div>
+
+                        <div class="campo-formulario">
+                            <label for="mensaje">Mensaje</label>
+
+                            <textarea
+                                id="mensaje"
+                                name="mensaje"
+                                placeholder="Escribe tu consulta..."
+                                required
+                                minlength="10"></textarea>
+                        </div>
+
+                        <button type="submit">Enviar consulta <span>→</span></button>
+
+                    </form>
+
+                </div>
 
             </div>
 
         </section>
 
-
-        <!-- 7. FORMULARIO DE CONSULTAS -->
-        <section id="contacto">
-
-            <h2>¿Tienes alguna consulta?</h2>
-
-            <p>Estamos aquí para ayudarte a planificar tu próxima aventura.</p>
-
-            <form action="#" method="post">
-
-                <label for="nombre">Nombre completo</label>
-                <input type="text" id="nombre" name="nombre"
-                       placeholder="Ingresa tu nombre"
-                       required minlength="3">
-
-                <label for="correo">Correo electrónico</label>
-                <input type="email" id="correo" name="correo"
-                       placeholder="ejemplo@correo.com"
-                       required>
-
-                <label for="destino">Destino de interés</label>
-                <select id="destino" name="destino" required>
-
-                    <option value="">Selecciona un destino</option>
-                    <option value="galapagos">Galápagos</option>
-                    <option value="costa">Costa</option>
-                    <option value="sierra">Sierra</option>
-                    <option value="amazonia">Amazonía</option>
-
-                </select>
-
-                <label for="mensaje">Mensaje</label>
-                <textarea id="mensaje" name="mensaje"
-                          placeholder="Escribe tu consulta"
-                          required minlength="10"></textarea>
-
-                <button type="submit">Enviar consulta</button>
-
-            </form>
-
-        </section>
-
     </main>
 
+    <!-- 8. PIE DE PÁGINA -->
+    <footer id="footer">
 
-    <!-- 8. PIE DE PAGINA -->
-    <footer>
+        <div class="footer-contenido">
 
-        <div>
-            <a href="#inicio">ECUADOR</a>
+            <div class="footer-marca">
+                <a href="#inicio" class="footer-logo">ECUADOR<span>.com</span></a>
 
-            <p>Descubre la magia de nuestro país.</p>
+                <p>
+                    Descubre la magia de nuestro país.
+                    Cuatro regiones, miles de experiencias
+                    y destinos que esperan por ti.
+                </p>
+
+                <a href="#destinos" class="footer-boton">
+                    Explorar destinos <span>→</span>
+                </a>
+            </div>
+
+            <div class="footer-enlaces">
+                <h3>Explora</h3>
+
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#regiones">Regiones</a></li>
+                    <li><a href="#destinos">Destinos</a></li>
+                    <li><a href="#galeria">Galería</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-enlaces">
+                <h3>Planifica tu viaje</h3>
+
+                <ul>
+                    <li><a href="#paquetes">Paquetes turísticos</a></li>
+                    <li><a href="#itinerarios">Itinerarios</a></li>
+                    <li><a href="#contacto">Contáctanos</a></li>
+                </ul>
+            </div>
+
         </div>
 
-        <div>
-            <h3>Explora</h3>
+        <div class="footer-inferior">
+            <p>&copy; 2026 Visita Ecuador. Kevin Vaca - Proyecto Parcial 1.</p>
 
-            <ul>
-                <li><a href="#destinos">Destinos</a></li>
-                <li><a href="#regiones">Regiones</a></li>
-                <li><a href="#galeria">Galería</a></li>
-                <li><a href="#paquetes">Paquetes</a></li>
-            </ul>
+            <a href="#inicio">Volver al inicio ↑</a>
         </div>
-
-        <p>&copy; 2026 Visita Ecuador. Kevin Vaca - Proyecto Parcial 1.</p>
 
     </footer>
 

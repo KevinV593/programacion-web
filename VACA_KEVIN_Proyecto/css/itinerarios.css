@@ -1,0 +1,162 @@
+#itinerarios {
+    padding: 0;
+    background-color: var(--color-mar);
+}
+
+.itinerarios-fondo {
+    min-height: 700px;
+    padding: 100px 6%;
+
+    display: flex;
+    align-items: center;
+
+    background-image:
+        linear-gradient(
+            rgba(18, 59, 74, .78),
+            rgba(18, 59, 74, .82)
+        ),
+        url("../assets/img/itinerarios-ecuador.jpeg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.itinerarios-contenido {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.itinerarios-encabezado {
+    max-width: 800px;
+    margin: 0 auto 55px;
+    text-align: center;
+}
+
+.itinerarios-etiqueta {
+    margin-bottom: 12px;
+    color: var(--color-oro);
+    font-size: .85rem;
+    letter-spacing: 3px;
+}
+
+.itinerarios-encabezado h2 {
+    margin-bottom: 20px;
+    color: white;
+    font-size: 2.8rem;
+}
+
+.itinerarios-encabezado > p:last-child {
+    color: var(--color-arena);
+    font-size: 1rem;
+    line-height: 1.9;
+}
+
+.itinerarios-dias {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.itinerario-card {
+    min-height: 330px;
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    background-color: rgba(255, 255, 255, .12);
+    border: 1px solid rgba(255, 255, 255, .3);
+    border-radius: 16px;
+
+    backdrop-filter: blur(8px);
+
+    transition: transform .3s ease,
+                background-color .3s ease;
+}
+
+.itinerario-card:hover {
+    transform: translateY(-8px);
+    background-color: rgba(255, 255, 255, .2);
+}
+
+.itinerario-numero {
+    margin-bottom: 25px;
+    color: var(--color-oro);
+    font-family: var(--fuente-titulos);
+    font-size: 3.5rem;
+    line-height: 1;
+}
+
+.itinerario-dia {
+    margin-bottom: 10px;
+    color: var(--color-turquesa);
+    font-size: .8rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.itinerario-card h3 {
+    margin-bottom: 15px;
+    color: white;
+    font-size: 1.6rem;
+}
+
+.itinerario-card > p:last-child {
+    color: var(--color-arena);
+    font-size: .9rem;
+    line-height: 1.8;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+
+    .itinerarios-fondo {
+        padding: 80px 5%;
+    }
+
+    .itinerarios-dias {
+        grid-template-columns: 1fr;
+        max-width: 650px;
+        margin: 0 auto;
+    }
+
+    .itinerario-card {
+        min-height: auto;
+    }
+
+}
+
+/* CELULARES */
+
+@media (max-width: 600px) {
+
+    .itinerarios-fondo {
+        padding: 65px 5%;
+    }
+
+    .itinerarios-encabezado h2 {
+        font-size: 2.2rem;
+    }
+
+    .itinerarios-encabezado > p:last-child {
+        font-size: .9rem;
+    }
+
+    .itinerario-card {
+        padding: 25px;
+    }
+
+    .itinerario-numero {
+        font-size: 3rem;
+        margin-bottom: 20px;
+    }
+
+    .itinerario-card h3 {
+        font-size: 1.4rem;
+    }
+
+}

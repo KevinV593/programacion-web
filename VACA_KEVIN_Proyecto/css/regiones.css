@@ -131,10 +131,6 @@
     font-weight: bold;
 }
 
-.region-card:nth-of-type(even) .region-caracteristicas {
-    color: var(--color-rojo);
-}
-
 .region-texto a {
     align-self: flex-start;
 
