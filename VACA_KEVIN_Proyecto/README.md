@@ -47,5 +47,6 @@ Visita-Ecuador/
 
 ## Enlaces del proyecto
 
-- **GitHub:** [Agregar enlace del repositorio]
+- **GitHub:** [https://github.com/KevinV593/programacion-web/tree/main/VACA_KEVIN_Proyecto]
 - **Docker Hub:** [https://hub.docker.com/r/kevinv593/vaca-kevin-proyecto1]
+- **Presentación:** [https://canva.link/2onzho9fb7vfpip]
