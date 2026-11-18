@@ -1,12 +1,22 @@
 * {
     box-sizing: border-box;
-    background-color: #000000
+}
+
+body {
+    background-color: whitesmoke;
 }
 
 .card {
     background-color: white;
     margin: auto;
+    text-align: center;
     width: 300px;
     height: 300px;
     padding: 20px;
+    border-radius: 10px;
+    border: 1px solid blue;
+}
+
+button {
+    bor
 }
