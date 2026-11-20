@@ -8,53 +8,71 @@ let entradasVendidas = 0;
 let comprasRealizadas = 0;
 let ingresosAcumulados = 0;
 
+// Muestra mensajes al usuario y los registra en consola.
+function mostrarMensaje(mensaje) {
+    alert(mensaje);
+    console.log(mensaje);
+}
+
 let menu = 0;
 do {
-    console.log("=====================================");
-    console.log("INNOVA ESPE 2026");
-    console.log("SISTEMA DE GESTIÓN DE ENTRADAS");
-    console.log("=====================================");
-    console.log("1. Comprar entradas");
-    console.log("2. Consultar cupos disponibles");
-    console.log("3. Consultar ingresos acumulados");
-    console.log("4. Salir");
+    menu = prompt(
+        "=====================================\n" +
+        "          INNOVA ESPE 2026\n" +
+        "     SISTEMA DE GESTIÓN DE ENTRADAS\n" +
+        "=====================================\n\n" +
+        "1. Comprar entradas\n" +
+        "2. Consultar cupos disponibles\n" +
+        "3. Consultar ingresos acumulados\n" +
+        "4. Salir\n\n" +
+        "Seleccione una opción (1-4):"
+    );
 
-    menu = prompt("\nSeleccione una opción del menú (1-4): ");
     switch(menu) {
         case "1": 
+            console.log("-------------------------------------");
             console.log("REGISTRO DE COMPRA DE ENTRADAS");
 
             if(cuposDisponibles === 0) {
-                console.log("No hay entradas disponibles.");
+                mostrarMensaje("No hay entradas disponibles.");
                 break;
             }
 
-            const nombreComprador = prompt("Ingrese el nombre del comprador:");
-            if (nombreComprador === null || nombreComprador === "") {
-                console.log("Debe ingresar un nombre válido.");
+            const nombreComprador = prompt(
+                "Ingrese el nombre del comprador:"
+            );
+
+            if (nombreComprador === null ||
+                //.trim convierte espacios vacios " " a ""
+                nombreComprador.trim() === "") {
+                mostrarMensaje("Nombre no válido.");
                 break;
             }
 
             const tipoParticipante = prompt(
                 "Tipo de participante:\n" +
-                "1. Estudiante\n" + "2. Docente\n" + "3. Público general"
+                "1. Estudiante\n" + "2. Docente\n" + "3. Público general" +
+                "Seleccione una opción:"
             );
             if (tipoParticipante !== "1" && tipoParticipante !== "2" && tipoParticipante !== "3") {
-                console.log("Tipo de participante no válido.");
+                mostrarMensaje("Tipo de participante no válido.");
                 break;
             }
 
-            const cantidadTexto = prompt("Cantidad de entradas (máximo 5):");
+            const cantidadTexto = prompt("Ingrese la cantidad de entradas (1-5):");
             //El texto se convierte a numero con el operador +
             const cantidad = +cantidadTexto;
-            if (cantidadTexto === null || cantidadTexto === "" || cantidad % 1 !== 0 || 
+            if (cantidadTexto === null || cantidadTexto.trim() === "" || cantidad % 1 !== 0 || 
                 cantidad < 1 || cantidad > limiteMaximoDeEntradas) {
-                console.log("Ingrese una cantidad válida entre 1 y 5.");
+                mostrarMensaje("Ingrese una cantidad válida entre 1 y 5.");
                 break;
             }
 
             if (cantidad > cuposDisponibles) {
-                console.log("No existen suficientes cupos disponibles.");
+                mostrarMensaje(
+                    `Cupos insuficientes.\n` +
+                    `Solo quedan ${cuposDisponibles} entradas.`
+                );
                 break;
             }
 
@@ -78,36 +96,61 @@ do {
             comprasRealizadas++;
             ingresosAcumulados += totalPagar;
 
-            console.log("=====================================");
-            console.log("RESUMEN DE COMPRA");
-            console.log(`Comprador: ${nombreComprador}`);
-            console.log(`Participante: ${nombreParticipante}`);
-            console.log(`Entradas: ${cantidad}`);
-            console.log(`Subtotal: $${subtotal.toFixed(2)}`);
-            console.log(`Descuento: $${descuento.toFixed(2)}`);
-            console.log(`Total a pagar: $${totalPagar.toFixed(2)}`);
-            console.log("Compra realizada exitosamente.");
-            console.log(`Cupos restantes: ${cuposDisponibles}`);
+            mostrarMensaje(
+                "COMPRA REALIZADA EXITOSAMENTE\n" +
+                "=====================================\n" +
+                `Comprador: ${nombreComprador}\n` +
+                `Participante: ${nombreParticipante}\n` +
+                `Cantidad: ${cantidad}\n\n` +
+                //toFixed muestra fijo dos decimales
+                `Subtotal: $${subtotal.toFixed(2)}\n` +
+                `Descuento (${porcentajeDescuento * 100}%): $${descuento.toFixed(2)}\n` +
+                `Total a pagar: $${totalPagar.toFixed(2)}\n\n` +
+                `Cupos restantes: ${cuposDisponibles}`
+            );
+            break;
+                        
+            case "2": 
+                let estadoCupos;
 
-            break;
-            case "2":
-            console.log(`CUPOS DISPONIBLES: ${cuposDisponibles}`);
-            break;
-        
+                if (cuposDisponibles > 10) {
+                    estadoCupos = "Cupos disponibles.";
+                } else if (cuposDisponibles >= 1) {
+                    estadoCupos = "Últimos cupos disponibles.";
+                } else {
+                    estadoCupos = "Evento agotado.";
+                }
+
+                mostrarMensaje(
+                    "-------------------------------------\n" +
+                    "CONSULTA DE DISPONIBILIDAD\n" +
+                    `Cupos disponibles: ${cuposDisponibles}\n` +
+                    `Estado: ${estadoCupos}`
+                );
+                break;
+            
             case "3":
-            console.log(`INGRESOS TOTALES REGISTRADOS: ${ingresosAcumulados}`);
-            break;
-        
+                mostrarMensaje(
+                    "-------------------------------------\n" +
+                    "CONSULTA DE INGRESOS\n" +
+                    `Entradas vendidas: ${entradasVendidas}\n` +
+                    `Compras realizadas: ${comprasRealizadas}\n` +
+                    `Ingresos acumulados: $${ingresosAcumulados.toFixed(2)}`
+                );
+                break;
+            
             case "4":
-            console.log("RESUMEN FINAL DE VENTAS");
-            console.log(`Entradas vendidas: ${entradasVendidas}`);
-            console.log(`Compras realizadas: ${comprasRealizadas}`);
-            console.log(`Ingresos acumulados: $${ingresosAcumulados}`);
-            break;
-
+                mostrarMensaje(
+                    "-------------------------------------\n" +
+                    "RESUMEN FINAL DE VENTAS\n" +
+                    `Entradas vendidas: ${entradasVendidas}\n` +
+                    `Compras realizadas: ${comprasRealizadas}\n` +
+                    `Ingresos acumulados: $${ingresosAcumulados.toFixed(2)}\n\n` +
+                    "Gracias por utilizar Innova ESPE 2026."
+                );
+                break;
             default: 
             console.log("Opción no válida. Seleccione un número entre 1 y 4.");
             break;
     }
 } while (menu != "4")
-    
