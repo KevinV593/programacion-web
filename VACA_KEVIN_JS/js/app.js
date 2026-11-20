@@ -51,7 +51,7 @@ do {
 
             const tipoParticipante = prompt(
                 "Tipo de participante:\n" +
-                "1. Estudiante\n" + "2. Docente\n" + "3. Público general" +
+                "1. Estudiante\n" + "2. Docente\n" + "3. Público general\n" +
                 "Seleccione una opción:"
             );
             if (tipoParticipante !== "1" && tipoParticipante !== "2" && tipoParticipante !== "3") {
