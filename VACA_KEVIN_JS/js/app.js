@@ -8,11 +8,10 @@ let entradasVendidas = 0;
 let comprasRealizadas = 0;
 let ingresosAcumulados = 0;
 
-// Muestra mensajes al usuario y los registra en consola.
-function mostrarMensaje(mensaje) {
+const mostrarMensaje = (mensaje) => {
     alert(mensaje);
     console.log(mensaje);
-}
+};
 
 let menu = 0;
 do {
