@@ -61,8 +61,6 @@ Una compra únicamente se registra cuando los datos son válidos y existe dispon
 4. Seguir las instrucciones para comprar entradas o consultar información.
 5. Seleccionar **4. Salir** para visualizar el resumen final.
 
-No es necesario instalar dependencias ni utilizar un servidor para ejecutar este prototipo.
-
 ## Consideraciones
 
 - El prototipo utiliza las ventanas de diálogo del navegador y la consola para interactuar con el usuario.
