@@ -13,12 +13,12 @@ El sistema permite registrar compras, aplicar descuentos según el tipo de parti
 - **Estudiante:** Kevin Vaca
 - **Lenguaje:** JavaScript nativo
 - **Tecnologías:** HTML5 y JavaScript
-- **Repositorio de GitHub:** [PEGAR AQUÍ EL ENLACE AL REPOSITORIO]
+- **Repositorio de GitHub:** [https://github.com/KevinV593/programacion-web/tree/main/VACA_KEVIN_JS]
 
 ## Estructura del proyecto
 
 ```text
-APELLIDO_NOMBRE_JS/
+VACA_KEVIN_JS/
 ├── index.html
 ├── js/
 │   └── app.js
@@ -86,4 +86,4 @@ No es necesario instalar dependencias ni utilizar un servidor para ejecutar este
 
 El historial de cambios del proyecto puede consultarse en la sección **Commits** del repositorio de GitHub.
 
-**Enlace del repositorio:** [PEGAR AQUÍ EL ENLACE DE GITHUB]
+**Enlace del repositorio:** [https://github.com/KevinV593/programacion-web/tree/main/VACA_KEVIN_JS]
