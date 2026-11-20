@@ -63,19 +63,6 @@ Una compra únicamente se registra cuando los datos son válidos y existe dispon
 
 No es necesario instalar dependencias ni utilizar un servidor para ejecutar este prototipo.
 
-## Casos de prueba sugeridos
-
-| Escenario | Resultado esperado |
-|---|---|
-| Estudiante compra 3 entradas | Total: $42.00 |
-| Docente compra 2 entradas | Total: $34.00 |
-| Público general compra 1 entrada | Total: $20.00 |
-| Solicitar 0 o 6 entradas | Compra rechazada |
-| Ingresar texto en la cantidad | Compra rechazada |
-| Solicitar más entradas que los cupos restantes | Compra rechazada |
-| Seleccionar una opción inexistente | Mensaje de opción no válida |
-| Seleccionar la opción 4 | Resumen final y fin del programa |
-
 ## Consideraciones
 
 - El prototipo utiliza las ventanas de diálogo del navegador y la consola para interactuar con el usuario.
